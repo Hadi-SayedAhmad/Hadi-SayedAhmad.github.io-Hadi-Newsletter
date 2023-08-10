@@ -68,7 +68,7 @@ app.post("/", (req, res) => {
         // })
     });
 
-    // request.write(jsonData); //This method sends the JSON data (jsonData) in the request body... the .write method let us send data
+    request.write(jsonData); //This method sends the JSON data (jsonData) in the request body... the .write method let us send data
     request.end(); //called to indicate the completion of the request setup and initiate the actual sending of the request to the server.
 
 });
