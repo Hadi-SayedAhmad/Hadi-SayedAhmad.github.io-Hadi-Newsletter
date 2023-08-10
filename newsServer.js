@@ -78,8 +78,8 @@ app.post("/failure", (req, resp) => {
 })
 
 
-app.listen( process.env.PORT , () => {
-    console.log("Server is now live on port " + process.env.PORT + ".");
+app.listen(3000, () => {
+    console.log("Server is now live on port 3000");
 });
 
 
