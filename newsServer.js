@@ -78,7 +78,7 @@ app.post("/failure", (req, resp) => {
 })
 
 
-app.listen(process.env.PORT, () => {
+app.listen(3000, () => {
     console.log("Server is now live!");
 });
 
