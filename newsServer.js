@@ -63,9 +63,9 @@ app.post("/", (req, res) => {
         {
             res.sendFile(__dirname + "/failure.html");
         }
-        // response.on("data", (data) => {
-        //     console.log(JSON.parse(data)); // we are parsing because the data sent to us back is in hexadecimal
-        // })
+        response.on("data", (data) => {
+            console.log(JSON.parse(data)); // we are parsing because the data sent to us back is in hexadecimal
+        })
     });
 
     request.write(jsonData); //This method sends the JSON data (jsonData) in the request body... the .write method let us send data
