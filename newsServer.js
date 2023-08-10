@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const request = require("request");
 const https = require("https");
 
-
+const port = process.env.PORT || 3000;
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public")); // When you use app.use(express.static("public")), it tells Express to serve static files from the "public" directory and make them accessible directly from the root of your website. This means that you don't need to include "public/" in the URL path when referencing static files in href or src. The middleware automatically takes care of mapping the URL to the appropriate file in the "public" directory.
@@ -78,7 +78,7 @@ app.post("/failure", (req, resp) => {
 })
 
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("Server is now live!");
 });
 
